@@ -1,0 +1,51 @@
+/* Sets the font for the entire page */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Styles for the grid representing a single cube face */
+.cube-face {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4px;
+    width: 120px;
+    height: 120px;
+}
+
+/* Styles for a single sticker (facelet) on a cube face */
+.facelet {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #9ca3af; /* gray-400 */
+    text-align: center;
+    line-height: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+/* Grid container for all six faces in their unfolded layout */
+.face-container {
+    display: grid;
+    grid-template-columns: repeat(4, 130px);
+    grid-template-rows: repeat(3, 130px);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Wrapper to help center each face within its grid cell */
+.face-wrapper {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+/* Positioning for each face in the grid */
+.U-face { grid-column: 2; grid-row: 1; }
+.L-face { grid-column: 1; grid-row: 2; }
+.F-face { grid-column: 2; grid-row: 2; }
+.R-face { grid-column: 3; grid-row: 2; }
+.B-face { grid-column: 4; grid-row: 2; }
+.D-face { grid-column: 2; grid-row: 3; }
